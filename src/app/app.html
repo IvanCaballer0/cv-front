@@ -7,9 +7,13 @@
     <app-profile />
   </section>
 
-  <!-- @defer (on viewport) {
-    <section class="projects-section">
-      <app-projects />
-    </section>
-  } -->
+  @defer (on viewport) {
+  <app-projects />
+  } @placeholder (minimum 500ms) {
+    <div class="loading-anchor" role="status" aria-label="Cargando sección de proyectos">
+      <p>Preparando galería de proyectos...</p>
+    </div>
+  } @loading {
+    <div class="spinner">Cargando recursos...</div>
+  }
 </main>
