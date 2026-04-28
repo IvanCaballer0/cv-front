@@ -1,0 +1,114 @@
+/* Contenedor de la sección utilizando CSS Grid para organización clara */
+:host {
+  display: block;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Estilo de Tarjetas (Cards) */
+.education-card, .skills-card {
+  background: var(--card-bg, #ffffff);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #007bff; /* Color primario para énfasis */
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+/* Estilos de Educación */
+.edu-content h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.institution {
+  font-weight: 600;
+  color: #007bff;
+  margin: 0.25rem 0;
+}
+
+.year {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.highlights-list {
+  padding-left: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Estilos de Habilidades (Skills) */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.skill-name {
+  font-weight: 700;
+  color: #2d3436;
+}
+
+/* Niveles de Skill - Usando clases nativas según el estándar */
+.level-advanced {
+  color: #27ae60;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.level-intermediate {
+  color: #f39c12;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.level-basic {
+  color: #7f8c8d;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* Responsividad: En móviles las columnas se apilan */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Accesibilidad: Foco visible para navegación por teclado */
+.education-card:hover, .skills-card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}

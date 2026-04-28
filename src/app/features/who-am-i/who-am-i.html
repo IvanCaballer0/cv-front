@@ -1,0 +1,29 @@
+<div class="profile-card">
+  <div class="image-wrapper">
+    <img 
+      [ngSrc]="userProfile().avatarUrl" 
+      [alt]="'Foto de perfil de ' + userProfile().fullName"
+      width="200" 
+      height="200"
+      priority
+      class="avatar-img">
+  </div>
+
+  <div class="content">
+    <h1 id="who-am-i-title" class="title">
+      {{ userProfile().fullName }}
+    </h1>
+    
+    <p [class.highlight]="true" class="subtitle">
+      {{ userProfile().professionalTitle }}
+    </p>
+
+    <p class="description">
+      {{ userProfile().biography }}
+    </p>
+
+    <footer class="footer-info">
+      <span aria-label="Ubicación">📍 {{ userProfile().location }}</span>
+    </footer>
+  </div>
+</div>
