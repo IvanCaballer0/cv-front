@@ -1,5 +1,5 @@
 <div class="profile-card">
-  <div class="image-wrapper">
+  <!-- <div class="image-wrapper">
     <img 
       [ngSrc]="userProfile().avatarUrl" 
       [alt]="'Foto de perfil de ' + userProfile().fullName"
@@ -7,6 +7,16 @@
       height="200"
       priority
       class="avatar-img">
+  </div> -->
+
+  <div class="avatar-container">
+  <div class="sprite-clipper">
+      <div class="spritesheet" 
+          [class]="currentFrameClass()"
+          role="img" 
+          aria-label="Avatar animado de Ivan Caballero">
+      </div>
+    </div>
   </div>
 
   <div class="content">
