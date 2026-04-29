@@ -3,18 +3,58 @@ import { Skill, Education } from '../models/profile-details';
 
 @Injectable()
 export class ProfileDetails {
-  // Datos académicos de tu universidad de élite
-  readonly education = signal<Education>({
-    degree: 'Ingeniería Industrial',
-    institution: 'Universidad de Élite', // Aquí pondrás el nombre real
-    year: '2025 (Esperado)',
-    highlights: ['Enfoque en Optimización', 'Análisis de Sistemas Complejos', 'Excelencia Académica']
-  });
+  education = signal<Education[]>([
+    {
+      degree: 'Ingeniería de Sistemas y Computación',
+      institution: 'Universidad de los Andes',
+      year: '2024 - En curso',
+      highlights: [
+        'Enfoque en soluciones seguras (OWASP)',
+        'Arquitectura escalable',
+        'Optimización de flujos con IA'
+      ]
+    },
+    {
+      degree: 'Diplomado en Tecnologías Front-end',
+      institution: 'Universidad Santo Tomas',
+      year: '2021',
+      highlights: [
+        'Desarrollo de interfaces',
+        'Estándares web'
+      ]
+    }
+  ]);
 
-  readonly skills = signal<Skill[]>([
-    { name: 'Angular', level: 'Advanced', category: 'Tech' },
-    { name: 'Python', level: 'Intermediate', category: 'Tech' },
-    { name: 'Cybersecurity', level: 'Intermediate', category: 'Tech' },
-    { name: 'Financial Analysis', level: 'Intermediate', category: 'Finance' }
+  skills = signal<Skill[]>([
+    {
+      name: 'Angular (v21+)',
+      level: 'Advanced',
+      category: 'Tech'
+    },
+    {
+      name: 'TypeScript',
+      level: 'Advanced',
+      category: 'Tech'
+    },
+    {
+      name: 'Python & Bash',
+      level: 'Intermediate',
+      category: 'Tech'
+    },
+    {
+      name: 'Model Context Protocol (MCP)',
+      level: 'Advanced',
+      category: 'Tech'
+    },
+    { 
+      name: 'Cybersecurity (OWASP/NIST)',
+      level: 'Intermediate',
+      category: 'Tech'
+    },
+    {
+      name: 'Prompt Engineering',
+      level: 'Advanced',
+      category: 'Tech'
+    }
   ]);
 }

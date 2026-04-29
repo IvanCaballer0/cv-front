@@ -13,14 +13,12 @@ import { ProfileDetails } from './services/profile-details';
   }
 })
 export class Profile {
-  private readonly detailsService = inject(ProfileDetails);
+  detailsService = inject(ProfileDetails);
 
-  // Signals para la vista
-  protected readonly education = this.detailsService.education;
-  private readonly allSkills = this.detailsService.skills;
+  education = this.detailsService.education;
+  allSkills = this.detailsService.skills;
 
-  // Estado derivado usando computed() según tus buenas prácticas
-  protected readonly techSkills = computed(() => 
+  techSkills = computed(() => 
     this.allSkills().filter(s => s.category === 'Tech')
   );
 }

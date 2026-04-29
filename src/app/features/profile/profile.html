@@ -1,5 +1,5 @@
 <div class="grid-container">
-  <section class="education-card">
+  <!-- <section class="education-card">
     <h2 id="edu-title">Formación Académica</h2>
     <div class="edu-content">
       <h3>{{ education().degree }}</h3>
@@ -11,6 +11,22 @@
           <li>{{ item }}</li>
         }
       </ul>
+    </div>
+  </section> -->
+  <section class="education-card">
+    <h2 id="edu-title">Formación Académica</h2>
+    <div class="edu-content">
+      @for (i of education(); track i) {
+        <h3>{{ i.degree }}</h3>
+        <p class="institution">{{ i.institution }}</p>
+        <p class="year">{{ i.year }}</p>
+
+        <ul class="highlights-list">
+          @for (j of i.highlights; track j) {
+            <li>{{ j }}</li>
+          }
+        </ul>
+      }
     </div>
   </section>
 

@@ -1,19 +1,13 @@
-<main>
-  <section class="hero-section">
-    <app-who-am-i />
-  </section>
+<app-who-am-i />
 
-  <section class="details-section">
-    <app-profile />
-  </section>
+<app-profile />
 
-  @defer (on viewport) {
+@defer (on viewport) {
   <app-projects />
-  } @placeholder (minimum 500ms) {
-    <div class="loading-anchor" role="status" aria-label="Cargando sección de proyectos">
-      <p>Preparando galería de proyectos...</p>
-    </div>
-  } @loading {
-    <div class="spinner">Cargando recursos...</div>
-  }
-</main>
+} @placeholder (minimum 800ms) {
+  <div class="section-placeholder" aria-hidden="true">
+    <p>Preparando proyectos técnicos...</p>
+  </div>
+} @loading {
+  <div class="loading-spinner">Cargando recursos...</div>
+}
