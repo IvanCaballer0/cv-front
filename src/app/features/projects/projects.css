@@ -22,8 +22,9 @@
 .image-container {
   position: relative;
   width: 100%;
-  height: 200px; /* Altura fija para mantener la consistencia */
+  height: 200px;
   background: #f0f0f0;
+  overflow: hidden;
 }
 
 .card-content {
@@ -45,4 +46,10 @@
   color: #4338ca;
   border-radius: 999px;
   font-weight: 600;
+}
+
+.project-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

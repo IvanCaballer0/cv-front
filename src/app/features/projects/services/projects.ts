@@ -17,14 +17,14 @@ export class Projects {
         'OpenClaw',
         'Python'
       ],
-      imageUrl: 'assets/projects/angular-cv.webp'
+      imageUrl: '/images/project-1.png'
     },
     {
       id: '2',
       title: 'Auditoría Técnica & Pentesting',
       description: 'Documentación de +10 laboratorios en Hack The Box (HTB) y creación de scripts en Python/Bash para reconocimiento automatizado.',
       technologies: ['Kali Linux', 'Python', 'Bash', 'HTB'],
-      imageUrl: 'assets/projects/cybersec.webp'
+      imageUrl: '/images/project-2.png'
     }
   ]);
 

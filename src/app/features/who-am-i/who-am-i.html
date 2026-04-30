@@ -1,14 +1,4 @@
 <div class="profile-card">
-  <!-- <div class="image-wrapper">
-    <img 
-      [ngSrc]="userProfile().avatarUrl" 
-      [alt]="'Foto de perfil de ' + userProfile().fullName"
-      width="200" 
-      height="200"
-      priority
-      class="avatar-img">
-  </div> -->
-
   <div class="avatar-container">
   <div class="sprite-clipper">
       <div class="spritesheet" 
@@ -33,7 +23,9 @@
     </p>
 
     <footer class="footer-info">
-      <span aria-label="Ubicación">📍 {{ userProfile().location }}</span>
+      <span aria-label="Ubicación">
+        <img src="/location-pin.svg" alt="" style="height: 30px; width: 30px;">
+        {{ userProfile().location }}</span>
     </footer>
   </div>
 </div>
