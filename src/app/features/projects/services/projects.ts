@@ -12,19 +12,28 @@ export class Projects {
       technologies: [
         'Angular 21',
         'TypeScript',
-        'Signals', 'MCP',
+        'Signals',
+        'MCP',
         'Gemini',
         'OpenClaw',
         'Python'
       ],
-      imageUrl: '/images/project-1.png'
+      imageUrl: '/images/project-1.png',
+      repositoryUrl: 'https://github.com/IvanCaballer0/cv-front'
     },
     {
       id: '2',
       title: 'Auditoría Técnica & Pentesting',
-      description: 'Documentación de +10 laboratorios en Hack The Box (HTB) y creación de scripts en Python/Bash para reconocimiento automatizado.',
-      technologies: ['Kali Linux', 'Python', 'Bash', 'HTB'],
-      imageUrl: '/images/project-2.png'
+      description: 'Documentación de +10 laboratorios en Hack The Box (HTB) y \
+      creación de scripts en Python/Bash para reconocimiento automatizado.',
+      technologies: [
+        'Kali Linux',
+        'Python',
+        'Bash',
+        'HTB'
+      ],
+      imageUrl: '/images/project-2.png',
+      repositoryUrl: 'https://github.com/IvanCaballer0'
     }
   ]);
 

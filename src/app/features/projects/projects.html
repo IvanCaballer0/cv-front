@@ -3,13 +3,15 @@
 <div class="projects-grid">
   @for (project of projects(); track project.id) {
     <article class="project-card">
-      <div class="image-container">
-        <img 
-          [ngSrc]="project.imageUrl" 
-          [alt]="'Vista previa de ' + project.title"
-          fill
-          class="project-img">
-      </div>
+      <a [href]="project.repositoryUrl" target="_blank" rel="noopener noreferrer">
+        <div class="image-container">
+          <img 
+            [ngSrc]="project.imageUrl" 
+            [alt]="'Vista previa de ' + project.title"
+            fill
+            class="project-img">
+        </div>
+      </a>
 
       <div class="card-content">
         <h3>{{ project.title }}</h3>
