@@ -2,7 +2,12 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* Evita scrolls horizontales accidentales */
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 /* Opcional: Asegura que el box-sizing no rompa tus layouts */

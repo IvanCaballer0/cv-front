@@ -1,15 +1,20 @@
-<app-who-am-i />
+<app-header />
 
-<app-profile />
+<main>
+  <app-who-am-i id="home" />
 
-@defer (on viewport) {
-  <app-projects />
-} @placeholder (minimum 800ms) {
-  <div class="section-placeholder" aria-hidden="true">
-    <p>Preparando proyectos técnicos...</p>
-  </div>
-} @loading {
-  <div class="loading-spinner">Cargando recursos...</div>
-}
+  <app-profile id="profile" />
+
+  @defer (on viewport) {
+    <app-projects id="projects" />
+  } @placeholder (minimum 800ms) {
+    <div class="section-placeholder">
+      <p>Preparando proyectos técnicos...</p>
+    </div>
+  }
+  
+  <section id="contact">
+    </section>
+</main>
 
 <app-footer />

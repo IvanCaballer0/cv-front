@@ -3,11 +3,12 @@ import { WhoAmI } from './features/who-am-i/who-am-i';
 import { Profile } from './features/profile/profile';
 import { ProjectsComponent } from './features/projects/projects';
 import { Footer } from './layout/footer/footer';
+import { Header } from './layout/header/header';
 
 
 @Component({
   selector: 'app-root',
-  imports: [WhoAmI, Profile, ProjectsComponent, Footer],
+  imports: [WhoAmI, Profile, ProjectsComponent, Footer, Header],
   templateUrl: './app.html',
   styleUrl: './app.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
