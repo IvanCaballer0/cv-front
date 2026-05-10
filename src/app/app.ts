@@ -4,6 +4,7 @@ import { Profile } from './features/profile/profile';
 import { ProjectsComponent } from './features/projects/projects';
 import { Footer } from './layout/footer/footer';
 import { Header } from './layout/header/header';
+import { signal } from '@angular/core';
 
 
 @Component({
@@ -17,4 +18,12 @@ import { Header } from './layout/header/header';
     'class': 'main-content'
   }
 })
-export class App {}
+export class App {
+  isLoaded = signal(false);
+
+  constructor() {
+    setTimeout(() => {
+      this.isLoaded.set(true);
+    }, 2500);
+  }
+}
