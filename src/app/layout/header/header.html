@@ -4,18 +4,23 @@
       <span class="prompt">></span> IVAN_CABALLERO<span class="blink">_</span>
     </div>
 
-    <nav class="nav-menu">
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Abrir menú">
+      <i class="fas" [class.fa-bars]="!isMenuOpen()" [class.fa-times]="isMenuOpen()"></i>
+    </button>
+
+    <nav class="nav-menu" [class.open]="isMenuOpen()">
       <ul>
         <li><a (click)="scrollToSection('profile')">Perfil</a></li>
         <li><a (click)="scrollToSection('projects')">Proyectos</a></li>
         <li><a (click)="scrollToSection('contact')">Contacto</a></li>
+        <li class="mobile-only">
+          <a href="/documents/CV_Ivan_Caballero.pdf" download class="btn-cv">Descargar CV</a>
+        </li>
       </ul>
     </nav>
 
-    <div class="actions">
-      <a href="/documents/CV_Ivan.pdf" 
-         download="CV_Ivan_Caballero_ATS.pdf"
-         class="btn-cv">
+    <div class="actions desktop-only">
+      <a href="/documents/CV_Ivan_Caballero.pdf" download class="btn-cv">
         <i class="fas fa-file-pdf"></i> Descargar CV
       </a>
     </div>

@@ -33,7 +33,7 @@ export class Projects {
         'HTB'
       ],
       imageUrl: '/images/project-2.png',
-      repositoryUrl: 'https://github.com/IvanCaballer0'
+      repositoryUrl: 'https://github.com/IvanCaballer0/security-audits.git'
     }
   ]);
 
