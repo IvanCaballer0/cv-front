@@ -1,8 +1,9 @@
 import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
+import { Logo } from '../../shared/logo/logo';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [Logo],
   templateUrl: './header.html',
   styleUrl: './header.css',
   changeDetection: ChangeDetectionStrategy.OnPush

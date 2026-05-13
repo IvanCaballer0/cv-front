@@ -1,14 +1,4 @@
 <div class="profile-card">
-  <div class="avatar-container">
-  <div class="sprite-clipper">
-      <div class="spritesheet" 
-          [class]="currentFrameClass()"
-          role="img" 
-          aria-label="Avatar animado de Ivan Caballero">
-      </div>
-    </div>
-  </div>
-
   <div class="content">
     <h1 id="who-am-i-title" class="title">
       {{ userProfile().fullName }}
@@ -24,7 +14,7 @@
 
     <footer class="footer-info">
       <span aria-label="Ubicación">
-        <img src="/location-pin.svg" alt="" style="height: 30px; width: 30px;">
+        <img src="icons/location-pin.svg" alt="" style="height: 30px; width: 30px;">
         {{ userProfile().location }}</span>
     </footer>
   </div>

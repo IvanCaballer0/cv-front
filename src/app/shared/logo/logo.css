@@ -1,0 +1,18 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: auto;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    fill: #000;
+    transition: all 0.3s ease;
+}
+
+:host-context(.logo:hover) svg {
+    fill: #007bff;
+    filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0.5));
+}

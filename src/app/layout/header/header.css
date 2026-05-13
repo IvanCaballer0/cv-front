@@ -27,9 +27,27 @@
   font-weight: bold;
   cursor: pointer;
   font-size: 1.1rem;
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
-.logo .prompt { color: #007bff; }
-.logo .blink { animation: blink 1s step-start infinite; }
+
+.logo .blink { 
+  animation: blink 1s step-start infinite;
+}
+
+.logo:hover {
+  fill: #007bff;
+  filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0.5));
+}
+
+.logo:hover .logo-text {
+  color: #007bff;
+}
+
+/* .logo-text:hover {
+  color: #007bff
+} */
 
 /* Menú de Navegación */
 .nav-menu ul {
