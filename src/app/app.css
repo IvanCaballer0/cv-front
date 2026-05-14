@@ -8,10 +8,6 @@ app-footer {
   margin-top: auto
 }
 
-app-projects {
-  margin-left: 50px;
-}
-
 .security-loader {
   position: fixed;
   top: 0; left: 0;
