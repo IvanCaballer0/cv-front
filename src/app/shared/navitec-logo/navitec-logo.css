@@ -1,5 +1,5 @@
 .navitec-wrapper {
-    width: 512px;
+    width: 594px;
 }
 
 @keyframes drawShield {
@@ -25,4 +25,36 @@
     stroke-dashoffset: 2636.48;
     stroke-width: 2;
     animation: drawShield 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+}
+
+
+/* Estilos para el responsive. */
+@media (max-width: 1024px) {
+    .navitec-wrapper {
+        width: 563px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navitec-wrapper {
+        width: 422px;
+    }
+}
+
+@media (max-width: 425px) {
+    .navitec-wrapper {
+        width: 234px;
+    }
+}
+
+@media (max-width: 375px) {
+    .navitec-wrapper {
+        width: 206px;
+    }
+}
+
+@media (max-width: 320px) {
+    .navitec-wrapper {
+        width: 176px;
+    }
 }
