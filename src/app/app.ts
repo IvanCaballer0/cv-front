@@ -5,11 +5,12 @@ import { ProjectsComponent } from './features/projects/projects';
 import { Footer } from './layout/footer/footer';
 import { Header } from './layout/header/header';
 import { signal } from '@angular/core';
+import { NavitecLogo } from './shared/navitec-logo/navitec-logo';
 
 
 @Component({
   selector: 'app-root',
-  imports: [WhoAmI, Profile, ProjectsComponent, Footer, Header],
+  imports: [WhoAmI, Profile, ProjectsComponent, Footer, Header, NavitecLogo],
   templateUrl: './app.html',
   styleUrl: './app.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -24,6 +25,6 @@ export class App {
   constructor() {
     setTimeout(() => {
       this.isLoaded.set(true);
-    }, 2500);
+    }, 10000);
   }
 }
